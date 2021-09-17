@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-midia',
+  selector: 'fin-midia',
   templateUrl: './midia.component.html',
   styleUrls: ['./midia.component.css']
 })

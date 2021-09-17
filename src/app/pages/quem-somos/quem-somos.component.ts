@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-quem-somos',
+  selector: 'fin-quem-somos',
   templateUrl: './quem-somos.component.html',
   styleUrls: ['./quem-somos.component.css']
 })
