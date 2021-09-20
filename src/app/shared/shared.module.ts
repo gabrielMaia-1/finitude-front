@@ -6,6 +6,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { NavListComponent } from './components/nav-list/nav-list.component';
 import { PortraitComponent } from './components/portrait/portrait.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,6 +21,7 @@ import { UserCardComponent } from './components/user-card/user-card.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
   ],
   exports: [
     NavComponent,

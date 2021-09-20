@@ -1,0 +1,10 @@
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 10px;
+}
+
+.card-container {
+    flex: 0 0 1024px;
+}

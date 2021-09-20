@@ -1,1 +1,17 @@
-<p>user-card works!</p>
+<fin-card>
+    <div class="container">
+        <section class="perfil">
+            <img>
+            <h3 class="cargo">{{this.colaborador.cargo}}</h3>
+            <q>{{this.colaborador.citacao}}</q>
+        </section>
+        <section>
+            <h2 class="nome">{{this.colaborador.nome}}</h2>
+            <p class="justify">{{this.colaborador.descricao}}</p>
+        </section>
+        <section>
+            <h2 class="contato">Contato</h2>
+            {{this.colaborador.contato | json}}
+        </section>
+    </div>
+</fin-card>

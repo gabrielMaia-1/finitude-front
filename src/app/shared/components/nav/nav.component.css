@@ -1,0 +1,65 @@
+:host {
+    --nav-height: 3.5rem;
+    --nav-top-height: 0.8rem;
+    --nav-bottom-height: 0.2rem;
+    --nav-lineheight: calc(var(--nav-height) - var(--nav-top-height) - var(--nav-bottom-height));
+
+    display: block;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 15px -2px #00000080;
+    background-color: white;
+    height: var(--nav-height);
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--nav-bottom-height);
+    height: 100%;
+}
+
+nav ul {
+    margin-top: var(--nav-top-height);
+    flex: 0 0 700px;
+    display: flex;
+    justify-content: stretch;
+}
+
+li { 
+    flex: 1 1;
+    text-align: center;
+    display: inline-block;
+}
+
+a {
+    padding: calc(var(--nav-lineheight) / 2 - 0.5rem);
+    display: inline-block;
+}
+
+a.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+nav::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: var(--nav-top-height);
+    background-color: var(--color-primary);
+}
+
+nav::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: calc(var(--nav-height) - var(--nav-bottom-height));
+    width: 100%;
+    height: var(--nav-bottom-height);
+    background-color: var(--color-primary);
+}

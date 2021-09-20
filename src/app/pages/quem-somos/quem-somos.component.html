@@ -1,1 +1,3 @@
-<p>quem-somos works!</p>
+<div class="card-container">
+    <fin-user-card *ngFor="let colaborador of $listaColaboradores | async" [colaborador]="colaborador"></fin-user-card>
+</div>

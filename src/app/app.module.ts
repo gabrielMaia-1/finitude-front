@@ -9,6 +9,9 @@ import { PostComponent } from './pages/post/post.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ServicosComponent } from './pages/servicos/servicos.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,9 +20,12 @@ import { AppRoutingModule } from './app-routing.module';
     AgendaComponent,
     MidiaComponent,
     PostComponent,
+    InicioComponent,
+    ServicosComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     SharedModule,
     CoreModule

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EMPTY, Observable, of, Subscription } from 'rxjs';
+import { FinApiService } from 'src/app/core/fin-api.service';
+import { Colaborador } from 'src/app/shared/models/Colaborador';
 
 @Component({
   selector: 'fin-quem-somos',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuemSomosComponent implements OnInit {
 
-  constructor() { }
+  $listaColaboradores: Observable<Colaborador[]> = this._finApi.get<Colaborador[]>('user');
 
-  ngOnInit(): void {
-  }
+  constructor(private _finApi: FinApiService) { }
+
+  ngOnInit(): void {  }
 
 }
