@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'fin-nav-list',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-list.component.css']
 })
 export class NavListComponent implements OnInit {
+
+  @ContentChild(TemplateRef)
+  navTemplate!: TemplateRef<any>;
+
+  @Input('navList') list: any[] | null = [];
 
   constructor() { }
 

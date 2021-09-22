@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
 
   .card-container {
       border-left: 15px solid var(--color-primary);
-      height: inherit;
+      height: 100%;
       padding: 1rem;
   }
   `]

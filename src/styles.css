@@ -6,7 +6,9 @@
     --color-primary: #3E9B77;
     --color-primary-dark: #176648;
 } 
-
+html {
+    background-color: #EDF1EC;
+}
 * {
     font-family:  sans-serif;
     font-size: 16px;

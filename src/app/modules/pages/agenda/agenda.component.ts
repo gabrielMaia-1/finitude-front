@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FinApiService } from 'src/app/core/fin-api.service';
+import { Evento } from 'src/app/shared/models/Agenda';
 
 @Component({
   selector: 'fin-agenda',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendaComponent implements OnInit {
 
-  constructor() { }
+  $eventoList = this._finApi.get<Evento[]>('agenda/proximosEventos')
+
+  constructor(private _finApi: FinApiService) { }
 
   ngOnInit(): void {
   }

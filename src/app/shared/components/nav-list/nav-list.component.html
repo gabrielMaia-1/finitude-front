@@ -1,1 +1,7 @@
-<p>nav-list works!</p>
+
+<ul>
+    <li *ngFor="let item of list || []">
+        <ng-template *ngTemplateOutlet="navTemplate; context: {item: item}"></ng-template>
+    </li>
+</ul>
+

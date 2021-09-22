@@ -1,0 +1,12 @@
+<fin-nav-list [navList]="$eventoList | async">
+    <ng-template #templateRef let-item="item">
+        <a routerLinkActive="link-active" [routerLink]="'/agenda/' + item.data.replace('/','-').slice(0,5)">
+            <h2>{{item.data.slice(0,5)}}</h2>
+            <p>{{item.descricao}}</p>
+            aasdas
+        </a>
+    </ng-template>
+</fin-nav-list>
+<fin-card>
+    Card!
+</fin-card>
