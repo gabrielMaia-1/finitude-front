@@ -1,0 +1,16 @@
+<div class="title-container">
+    <h2>Cartas</h2>
+    <div class="title-btn" (click)="adicionarLink()">Adicionar</div>
+</div>
+<hr>
+<div class="link-container" *ngFor="let link of links">
+    <div class="link">
+        {{link.key}}
+    </div>
+    <div class="link-btn" (click)="copiaLinnk(link.key)">
+        Copiar
+    </div>
+    <div class="link-btn last-link" (click)="excluirLink(link.key)">
+        Excluir
+    </div>
+</div>

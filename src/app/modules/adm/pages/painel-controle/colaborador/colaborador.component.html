@@ -1,0 +1,9 @@
+<div class="title-container">
+    <h2>Colaborador</h2>
+    <div class="title-btn" (click)="adicionar()">Adicionar</div>
+</div>
+<hr>
+<div class="editar" *ngFor="let colaborador of $listaColaboradores | async">
+    <div class="editar-icon">a</div>
+    <fin-user-card  [colaborador]="colaborador" (click)="editar(colaborador)"></fin-user-card>
+</div>

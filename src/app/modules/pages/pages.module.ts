@@ -26,8 +26,7 @@ import { PagesComponent } from './pages.component';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule,
-    CoreModule
+    SharedModule
   ]
 })
 export class PagesModule { }

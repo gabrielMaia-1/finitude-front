@@ -5,16 +5,25 @@
     position:absolute;
     width: 100%;
     height: 100%;
+    
 }
 
 .carta {
-    padding: 2em;
+    padding: 2rem;
+    margin: 2rem;
     background-color: white;
     border-radius: 0.5em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.445);
     width: 280px;
     height: 440px;
     font-family: bar;
+}
+
+@media (max-height:480px) {
+    .carta {
+        height: initial;
+        width: initial;
+    }
 }
 
 h3, h2 {

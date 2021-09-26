@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './core/auth-guard.service';
 
 const routes: Routes = [
   {path: 'carta', loadChildren: () => import('./modules/carta/carta.module').then(m => m.CartaModule)},

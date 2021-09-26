@@ -1,0 +1,24 @@
+:host {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    height: 240px;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+

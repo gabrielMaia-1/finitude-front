@@ -1,0 +1,10 @@
+<div class="panel">
+    <h2>Login</h2>
+    <form #f="ngForm" (submit)="onSubmit(f.value)">
+        <label for="login">Login</label>
+        <input type="text" id="login" name="login" ngModel>
+        <label for="senha">Senha</label>
+        <input type="text" id="senha" name="senha" ngModel>
+        <button type="submit">Entrar</button>
+    </form>
+</div>

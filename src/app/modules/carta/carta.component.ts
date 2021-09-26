@@ -66,7 +66,7 @@ export class CartaComponent implements OnInit {
       take(4),
       map(i => ['front', 'side', 'back', 'front'][i]),
       finalize(() => {
-        this.$carta = this._api.get<FiinitudeCarta>(`carta?key=${this._route.snapshot.queryParams.key || 0}`)
+        this.$carta = this._api.get<FiinitudeCarta>(`baralho?key=${this._route.snapshot.queryParams.key || 0}`)
         .pipe(
           map(res => res.conteudo),
           catchError(err => {

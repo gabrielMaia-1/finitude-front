@@ -1,17 +1,33 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpHeaderResponse, HttpInterceptor, HttpProgressEvent, HttpRequest, HttpResponse, HttpSentEvent, HttpUserEvent } from '@angular/common/http';
+import { Injectable, OnInit } from '@angular/core';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthInterceptor implements HttpInterceptor{
+export class AuthInterceptorService implements HttpInterceptor {
 
-  constructor() { }
-
+  hash = '';
+  
+  constructor() {
+  }
+  
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const newreq = req.clone({setHeaders: {auth: '1db1b101991f59c63e5767b0ab0984dc'}})
-    console.log(newreq)
-    return next.handle(newreq);
+    const validacao = this.hash || localStorage.getItem('hash');
+    if(!validacao) return next.handle(req).pipe(catchError(this.errorHandler));
+    const newreq = req.clone({setHeaders: {Auth: validacao}})
+
+    return next.handle(newreq).pipe(catchError(this.errorHandler));
+  }
+
+  errorHandler(err: HttpErrorResponse){
+    console.log(err)
+    return throwError('Something wrong happen');
+  }
+
+  setHash(hash: string){
+    this.hash = hash;
+    localStorage.setItem('hash', hash)
   }
 }
