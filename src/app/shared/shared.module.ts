@@ -7,6 +7,7 @@ import { NavListComponent } from './components/nav-list/nav-list.component';
 import { PortraitComponent } from './components/portrait/portrait.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { RouterModule } from '@angular/router';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     NavListComponent,
     UserCardComponent,
     PortraitComponent,
-    BtnComponent
+    BtnComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { RouterModule } from '@angular/router';
     NavListComponent,
     UserCardComponent,
     PortraitComponent,
-    BtnComponent
+    BtnComponent,
+    ModalComponent
   ]
 })
 export class SharedModule { }

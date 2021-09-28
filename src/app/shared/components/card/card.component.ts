@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'fin-card',
@@ -12,7 +12,6 @@ import { Component, OnInit } from '@angular/core';
     display: block;
     position: relative;
     overflow: hidden;
-    width: 100%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 15px #00000040;
@@ -28,9 +27,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  @Input('width') width: string = ''
+  @HostBinding('style.width') hostWidth = this.width;
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

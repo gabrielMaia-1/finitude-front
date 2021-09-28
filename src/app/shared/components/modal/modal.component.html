@@ -1,0 +1,7 @@
+<ng-container *ngIf="component$ | async as component">
+    <div class="modal-bg" (click)="fechar()">
+        <fin-card style="width: max-content;">
+        <ng-container [ngComponentOutlet]="component.component" [ngComponentOutletInjector]="component.injector"></ng-container>
+        </fin-card>
+    </div>
+</ng-container>

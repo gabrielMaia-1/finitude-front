@@ -41,3 +41,22 @@ h2 {
 .text-center {
     text-align: center;
 }
+
+input, label {
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+input {
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    border-style: ridge;
+    border-color: var(--color-primary);
+    outline:  solid 0 #3E9B774D;
+}
+
+input:focus-visible {
+    outline: 4px solid #3E9B774D;
+    transition: outline 0.1s linear;
+}
