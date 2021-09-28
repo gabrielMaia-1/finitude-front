@@ -8,10 +8,10 @@ import { PainelControleComponent } from './pages/painel-controle/painel-controle
 
 
 const routes: Routes = [
-  {path: 'login',component: AdmLoginComponent},
+  {path: 'login',component: AdmLoginComponent, canActivate: [AuthGuardService]},
   {path: '', canActivate: [AuthGuardService], component: PainelControleComponent, children:[
-    {path: 'baralho', component: PainelBaralhoComponent},
-    {path: 'colaborador', component: PainelColaboradorComponent}
+    {path: 'baralho', component: PainelBaralhoComponent, canActivate: [AuthGuardService]},
+    {path: 'colaborador', component: PainelColaboradorComponent, canActivate: [AuthGuardService]}
   ]}
 ];
 

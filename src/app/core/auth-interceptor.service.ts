@@ -26,6 +26,9 @@ export class AuthInterceptorService implements HttpInterceptor {
     return throwError('Something wrong happen');
   }
 
+  isAuthenticated(){
+    return this.hash || localStorage.getItem('hash')
+  }
   setHash(hash: string){
     this.hash = hash;
     localStorage.setItem('hash', hash)

@@ -11,9 +11,10 @@ export class AuthGuardService implements CanActivate {
   constructor(private _authInterceptor: AuthInterceptorService, private _router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    if(!this._authInterceptor.hash) {
-      return this._router.parseUrl('/adm/login')
+    if(state.url == '/adm/login'){
+      return this._authInterceptor.isAuthenticated() ? this._router.parseUrl('/adm') : true;
+    } else {
+      return this._authInterceptor.isAuthenticated() ? true : this._router.parseUrl('/adm/login');
     }
-    return true;
   }
 }
