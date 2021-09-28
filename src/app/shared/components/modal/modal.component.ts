@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Injector, Input, OnInit, QueryList, Type, ViewChild, ViewChildren, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren, ViewContainerRef } from '@angular/core';
 import { ModalService } from 'src/app/core/modal.service';
 
 @Component({

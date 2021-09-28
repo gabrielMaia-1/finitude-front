@@ -24,7 +24,6 @@ export class PainelColaboradorComponent implements OnInit {
   }
 
   editar(colaborador: Colaborador){
-    console.log(colaborador)
     this._modal.open<ModalColaboradorComponent>(ModalColaboradorComponent,{data: colaborador})
     .onClose()
     .subscribe(val => {

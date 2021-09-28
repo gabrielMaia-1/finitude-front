@@ -8,6 +8,7 @@ import { PortraitComponent } from './components/portrait/portrait.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from './components/modal/modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -24,6 +25,9 @@ import { ModalComponent } from './components/modal/modal.component';
   imports: [
     CommonModule,
     RouterModule,
+    
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     NavComponent,
@@ -32,7 +36,9 @@ import { ModalComponent } from './components/modal/modal.component';
     UserCardComponent,
     PortraitComponent,
     BtnComponent,
-    ModalComponent
+    ModalComponent,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

@@ -1,4 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, SkipSelf } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MODAL_DATA, MODAL_REF } from 'src/app/core/modal.service';
 import { ModalRef } from 'src/app/modules/adm/shared/model/ModalRef';
 
@@ -9,9 +10,21 @@ import { ModalRef } from 'src/app/modules/adm/shared/model/ModalRef';
 })
 export class ModalColaboradorComponent implements OnInit {
 
-  constructor(@Inject(MODAL_DATA) private _data: any,
-              @Inject(MODAL_REF) private _modal: ModalRef<ModalColaboradorComponent>) { }
+  form: FormGroup;
 
-  ngOnInit(): void { }
+  constructor(@SkipSelf() private _fb: FormBuilder,
+              @Inject(MODAL_DATA) private _data: any,
+              @Inject(MODAL_REF) private _modal: ModalRef<ModalColaboradorComponent>) {
+                this.form = this._fb.group({
+                  nome: [_data.nome || ''],
+                  cargo: [_data.cargo || ''],
+                  descricao: [_data.descricao || ''],
+                  citacao: [_data.citacao || '']
+                });
+              }
+
+  ngOnInit(): void {
+
+  }
 
 }
