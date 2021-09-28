@@ -9,15 +9,18 @@ ul {
     padding-top: 2em;
 }
 
-ul li {
-    padding: 0.5em 2em 0.5em 2em;
-}
-
 ul li.active {
     background-color: var(--color-primary-dark);
 }
+ul li.active a {
+    padding-left: 3em;
+}
 
 ul li a {
+    display: inline-block;
     font-size: 22px;
+    padding: 0.5em 2em 0.5em 2em;
     color: white;
+    width: 100%;
+    transition: padding 0.5s ease-out;
 }
