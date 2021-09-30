@@ -1,13 +1,42 @@
-<form [formGroup]="form">
-    <label>Nome</label>
-    <input type="text" formControlName="nome">
-    
-    <label>Cargo</label>
-    <input type="text" formControlName="cargo">
+<form [formGroup]="form" class="container">
+<div class="row">
+        <div class="col-4 text-center">
+            <img class="preview-img">
+        </div>
+        <div class="col-5">
+            <label>Nome</label>
+            <input type="text" formControlName="nome">
+            <label>Descrição</label>
+            <textarea name="" id="" cols="30" rows="3" formControlName="descricao"></textarea>
+        </div>
+        <div class="col-3">
+            <label>Cargo</label>
+            <input type="text" formControlName="cargo">
+            <label>Citacão</label>
+            <textarea name="" id="" cols="30" rows="3" formControlName="citacao"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label>Tipo Contato</label>
+            <select>
+                <option value="instagram">Instagram</option>
+                <option value="whatsapp">Whatsapp</option>
+                <option value="celular">Celular</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label>Tipo Contato</label>
+            <input type="text">
+        </div>
+        <div class="col-2">
+            <br>
+            <fin-btn>Adicionar</fin-btn>
+        </div>
+    </div>
+    <div class="row">
+        <fin-btn>Salvar</fin-btn>
+        <fin-btn class="flat" (click)="cancelar()">Cancelar</fin-btn>
+    </div>
 
-    <label>Citacão</label>
-    <input type="text" formControlName="citacao">
-
-    <label>Descrição</label>
-    <input type="text" formControlName="descricao">
 </form>

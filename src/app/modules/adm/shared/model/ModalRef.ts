@@ -12,7 +12,7 @@ export class ModalRef<T> {
         return this._onClose$.asObservable();
     }
 
-    close(data: any){
+    close(data?: any){
         this._onClose$.next(data);
         this._modalService.close();
     }

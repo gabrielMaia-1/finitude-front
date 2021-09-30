@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FinApiService } from 'src/app/core/fin-api.service';
+import { fadeAnimation } from 'src/app/shared/animations/fade';
 import { FinLink } from '../../../shared/model/FinLink';
 
 @Component({
   selector: 'fin-baralho',
   templateUrl: './baralho.component.html',
-  styleUrls: ['./baralho.component.css']
+  styleUrls: ['./baralho.component.css'],
+  animations: [fadeAnimation]
 })
 export class PainelBaralhoComponent implements OnInit {
 

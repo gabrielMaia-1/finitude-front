@@ -1,0 +1,43 @@
+:host {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-primary);
+    color: white;
+    transition: all 0.1s ease-out;
+    margin: 0.2rem;
+}
+
+:host:hover{
+    background-color: var(--color-primary-dark);
+}
+
+:host.danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+:host.danger:hover,
+:host.danger.flat:hover{
+    background-color: var(--color-danger-dark);
+    color: white;
+}
+
+:host.danger.flat {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+
+:host.flat {
+    color: inherit;
+    padding: calc(0.5rem - 1px);
+    background-color: transparent;
+    border: 1px solid var(--color-primary)
+}
+
+:host.flat:hover{
+    background-color: var(--color-primary-dark);
+    border-color: transparent;
+    color: white;
+}

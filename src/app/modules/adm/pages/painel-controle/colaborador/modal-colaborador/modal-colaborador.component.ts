@@ -12,19 +12,23 @@ export class ModalColaboradorComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(@SkipSelf() private _fb: FormBuilder,
+  constructor(private _fb: FormBuilder,
               @Inject(MODAL_DATA) private _data: any,
               @Inject(MODAL_REF) private _modal: ModalRef<ModalColaboradorComponent>) {
                 this.form = this._fb.group({
-                  nome: [_data.nome || ''],
-                  cargo: [_data.cargo || ''],
-                  descricao: [_data.descricao || ''],
-                  citacao: [_data.citacao || '']
+                  nome: [this._data.data.nome || ''],
+                  cargo: [this._data.data.cargo || ''],
+                  descricao: [this._data.data.descricao || ''],
+                  citacao: [this._data.data.citacao || '']
                 });
               }
 
   ngOnInit(): void {
 
+  }
+
+  cancelar(){
+    this._modal.close();
   }
 
 }

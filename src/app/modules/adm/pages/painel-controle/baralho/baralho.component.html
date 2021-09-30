@@ -3,14 +3,14 @@
     <div class="title-btn" (click)="adicionarLink()">Adicionar</div>
 </div>
 <hr>
-<div class="link-container" *ngFor="let link of links">
-    <div class="link">
+<div class="row" *ngFor="let link of links" @fade>
+    <div class="col-6">
         {{link.key}}
     </div>
-    <div class="link-btn" (click)="copiaLinnk(link.key)">
-        Copiar
+    <div class="col" >
+        <fin-btn class="flat" (click)="copiaLinnk(link.key)">Copiar</fin-btn>
     </div>
-    <div class="link-btn last-link" (click)="excluirLink(link.key)">
-        Excluir
+    <div class="col">
+        <fin-btn class="flat danger" (click)="excluirLink(link.key)">Excluir</fin-btn>
     </div>
 </div>
