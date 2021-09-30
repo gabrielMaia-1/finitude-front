@@ -1,16 +1,20 @@
-<div class="title-container">
-    <h2>Cartas</h2>
-    <div class="title-btn" (click)="adicionarLink()">Adicionar</div>
+<div class="row">
+    <div class="col-8">
+        <h2>Cartas</h2>
+    </div>
+    <div class="col self-center">
+        <fin-btn (click)="adicionarLink()"><i class="fas fa-plus" style="padding: 0;"></i></fin-btn>
+    </div>
 </div>
 <hr>
 <div class="row" *ngFor="let link of links" @fade>
-    <div class="col-6">
-        {{link.key}}
-    </div>
     <div class="col" >
         <fin-btn class="flat" (click)="copiaLinnk(link.key)">Copiar</fin-btn>
     </div>
     <div class="col">
         <fin-btn class="flat danger" (click)="excluirLink(link.key)">Excluir</fin-btn>
+    </div>
+    <div class="col-6 self-center">
+        {{link.key}}
     </div>
 </div>

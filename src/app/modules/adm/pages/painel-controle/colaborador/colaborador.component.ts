@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FinApiService } from 'src/app/core/fin-api.service';
 import { ModalService } from 'src/app/core/modal.service';
+import { fadeAnimation } from 'src/app/shared/animations/fade';
 import { Colaborador } from 'src/app/shared/models/Colaborador';
 import { ModalColaboradorComponent } from './modal-colaborador/modal-colaborador.component';
 
 @Component({
   selector: 'fin-painel-colaborador',
   templateUrl: './colaborador.component.html',
-  styleUrls: ['./colaborador.component.css']
+  styleUrls: ['./colaborador.component.css'],
+  animations: [fadeAnimation]
 })
 export class PainelColaboradorComponent implements OnInit {
   $listaColaboradores: Observable<Colaborador[]> = this._api.get<Colaborador[]>('user');
@@ -29,5 +31,9 @@ export class PainelColaboradorComponent implements OnInit {
     .subscribe(val => {
       console.log(val)
     })
+  }
+
+  excluir(colaborador: Colaborador){
+    
   }
 }

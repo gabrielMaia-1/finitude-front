@@ -2,16 +2,20 @@
     <div class="container">
         <section class="perfil">
             <img>
-            <h3 class="cargo">{{this.colaborador.cargo}}</h3>
-            <q>{{this.colaborador.citacao}}</q>
+            <h3 class="cargo">{{colaborador.cargo}}</h3>
+            <q>{{colaborador.citacao}}</q>
         </section>
         <section>
-            <h2 class="nome">{{this.colaborador.nome}}</h2>
-            <p class="justify">{{this.colaborador.descricao}}</p>
+            <h2 class="nome">{{colaborador.nome}}</h2>
+            <p class="justify">{{colaborador.descricao}}</p>
         </section>
         <section>
             <h2 class="contato">Contato</h2>
-            {{this.colaborador.contato | json}}
+            <div *ngFor="let contato of colaborador.contato" style="padding: 0.3rem;">
+
+                <i [class]="iconesContato[contato.tipo]"></i>
+                {{contato.contato}}
+            </div>
         </section>
     </div>
 </fin-card>

@@ -9,6 +9,7 @@
 .view {
     width: 100%;
     padding: 2em;
+    overflow-y: scroll;
 }
 
 

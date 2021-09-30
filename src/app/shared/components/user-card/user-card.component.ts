@@ -9,6 +9,12 @@ import { Colaborador } from '../../models/Colaborador';
 export class UserCardComponent implements OnInit {
 
   @Input('colaborador') colaborador!: Colaborador;
+  readonly iconesContato: any = {
+    instagram: 'fab fa-instagram',
+    whatsapp: 'fab fa-whatsapp',
+    telefone: 'fas fa-phone'
+  }
+  
 
   constructor() { }
 

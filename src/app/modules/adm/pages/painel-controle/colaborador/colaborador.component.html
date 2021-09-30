@@ -1,9 +1,16 @@
-<div class="title-container">
-    <h2>Colaborador</h2>
-    <div class="title-btn" (click)="adicionar()">Adicionar</div>
+<div class="row">
+    <div class="col-8">
+        <h2>Colaborador</h2>
+    </div>
+    <div class="col self-center">
+        <fin-btn (click)="adicionar()"><i class="fas fa-plus" style="padding: 0;"></i></fin-btn>
+    </div>
 </div>
 <hr>
 <div class="editar" *ngFor="let colaborador of $listaColaboradores | async">
-    <div class="editar-icon" (click)="editar(colaborador)">a</div>
+    <div class="hide row" @fade>
+        <fin-btn class="col" (click)="editar(colaborador)"><i class="fas fa-pencil-alt"></i></fin-btn>
+        <fin-btn class="col danger" (click)="excluir(colaborador)"><i class="fas fa-trash-alt"></i></fin-btn>
+    </div>
     <fin-user-card  [colaborador]="colaborador"></fin-user-card>
 </div>
