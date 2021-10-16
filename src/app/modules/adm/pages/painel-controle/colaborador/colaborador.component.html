@@ -12,5 +12,5 @@
         <fin-btn class="col" (click)="editar(colaborador)"><i class="fas fa-pencil-alt"></i></fin-btn>
         <fin-btn class="col danger" (click)="excluir(colaborador)"><i class="fas fa-trash-alt"></i></fin-btn>
     </div>
-    <fin-user-card  [colaborador]="colaborador"></fin-user-card>
+    <fin-user-card @fade [colaborador]="colaborador"></fin-user-card>
 </div>

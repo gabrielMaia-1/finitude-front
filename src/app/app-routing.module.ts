@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardService } from './core/auth-guard.service';
 
 const routes: Routes = [
-  {path: 'carta', loadChildren: () => import('./modules/carta/carta.module').then(m => m.CartaModule)},
-  {path: 'adm', loadChildren: () => import('./modules/adm/adm.module').then(m => m.AdmModule)}
+  {path: 'baralho', loadChildren: () => import('./modules/carta/carta.module').then(m => m.CartaModule)},
+  {path: 'adm', loadChildren: () => import('./modules/adm/adm.module').then(m => m.AdmModule), canActivate: [AuthGuardService]}
 ];
 
 @NgModule({

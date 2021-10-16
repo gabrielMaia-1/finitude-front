@@ -21,7 +21,8 @@ import { FiinitudeCarta } from './models/Carta';
       state('side', style({
         backgroundColor: '#547e5d',
         color: '#00000000',
-        transform: 'rotate3d(1, 1, 0, 90deg)'
+        transform: 'rotate3d(1, 1, 0, 90deg)',
+
       })),
       state('back', style({
         backgroundColor: '#547e5d',
@@ -44,7 +45,7 @@ import { FiinitudeCarta } from './models/Carta';
       transition('back => front', [
         animate('0.5s', keyframes([
           style({ transform: 'rotate3d(1, 1, 0, 90deg)', backgroundColor: 'white', color: '#00000000'}),
-          style({ transform: 'rotate3d(1, 1, 0, 0deg)', backgroundColor: 'white', color: 'inherit'}),
+          style({ transform: 'rotate3d(1, 1, 0, 0deg)',  backgroundColor: 'white', color: 'inherit'}),
         ])),
       ])
     ])

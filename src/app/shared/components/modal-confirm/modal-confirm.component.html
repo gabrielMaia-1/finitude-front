@@ -1,0 +1,20 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>
+                Confirmação:
+            </h2>
+            <p>
+                {{_data.data.mensagem}}
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row" style="flex-direction: row-reverse;">
+        <div class="col tex-right">
+            <fin-btn class="flat" (click)="_modal.close(false)">Cancelar</fin-btn>
+            <fin-btn class="danger" (click)="_modal.close(true)">Sim</fin-btn>
+        </div>
+    </div>
+</div>

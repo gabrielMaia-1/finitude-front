@@ -9,6 +9,7 @@ import { UserCardComponent } from './components/user-card/user-card.component';
 import { RouterModule } from '@angular/router';
 import { ModalComponent } from './components/modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalConfirmComponent } from './components/modal-confirm/modal-confirm.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserCardComponent,
     PortraitComponent,
     BtnComponent,
-    ModalComponent
+    ModalComponent,
+    ModalConfirmComponent
   ],
   imports: [
     CommonModule,

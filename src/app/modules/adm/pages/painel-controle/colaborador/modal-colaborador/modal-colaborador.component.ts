@@ -27,6 +27,10 @@ export class ModalColaboradorComponent implements OnInit {
 
   }
 
+  salvar(){
+    this._modal.close(this.form.value)
+  }
+
   cancelar(){
     this._modal.close();
   }

@@ -124,6 +124,7 @@ select::before {
 
 .text-justify { text-align: justify; }
 .text-center { text-align: center; }
+.text-right { text-align:  right; }
 .self-center { align-self: center; }
 
 .p-1 { padding: .1rem; }

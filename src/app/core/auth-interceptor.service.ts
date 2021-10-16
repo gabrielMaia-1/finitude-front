@@ -14,7 +14,7 @@ export class AuthInterceptorService implements HttpInterceptor {
   }
   
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const validacao = this.hash || localStorage.getItem('hash');
+    const validacao = this.hash || sessionStorage.getItem('hash');
     if(!validacao) return next.handle(req).pipe(catchError(this.errorHandler));
     const newreq = req.clone({setHeaders: {Auth: validacao}})
 
@@ -27,10 +27,10 @@ export class AuthInterceptorService implements HttpInterceptor {
   }
 
   isAuthenticated(){
-    return this.hash || localStorage.getItem('hash')
+    return this.hash || sessionStorage.getItem('hash')
   }
   setHash(hash: string){
     this.hash = hash;
-    localStorage.setItem('hash', hash)
+    sessionStorage.setItem('hash', hash)
   }
 }

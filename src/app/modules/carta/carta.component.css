@@ -1,11 +1,16 @@
 :host {
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     position:absolute;
     width: 100%;
     height: 100%;
-    
+    background-image: url('../../../assets/img/background-svg.svg');
+
+    background-color: var(--color-primary);
+    opacity: 0.5;
+    background-size: 600px;
 }
 
 .carta {
@@ -17,9 +22,25 @@
     width: 280px;
     height: 440px;
     font-family: bar;
+
+}
+.carta::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url('../../../assets/img/logo-trans.png');
+    background-position: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: -1;
 }
 
-@media (max-height:480px) {
+@media (max-height:520px), (max-width: 420px) {
     .carta {
         height: initial;
         width: initial;
